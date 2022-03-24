@@ -7,14 +7,14 @@
 - Payment
 - Order
 
-# Each entity will have the following attributes
+## Each entity will have the following attributes
 
 - id
 - createdAt
 - updatedAt
 - deletedAt
 
-## User
+### User
 
 - id
 - name
@@ -24,7 +24,7 @@
 - updatedAt
 - deletedAt
 
-## Product
+### Product
 
 - id
 - name
@@ -34,7 +34,7 @@
 - updatedAt
 - deletedAt
 
-## Payment
+### Payment
 
 - id
 - userId
@@ -45,7 +45,7 @@
 - updatedAt
 - deletedAt
 
-## Order
+### Order
 
 - id
 - userId
@@ -55,127 +55,56 @@
 - updatedAt
 - deletedAt
 
-# Each entity has the following relationships
+## Each entity has the following relationships
 
-## User
+### User
 
 - hasMany: Payment
 - hasMany: Order
 
-## Product
+### Product
 
 - belongsTo: User
 - hasMany: Order
 
-## Payment
+### Payment
 
 - belongsTo: User
 - belongsTo: Product
 - hasMany: Order
 
-## Order
+### Order
 
 - belongsTo: User
 - belongsTo: Product
 - belongsTo: Payment
 
-# Each entity will have the following methods
+## Each entity will have the following crud operations
 
-## User
-
-- create
-- read
-- update
-- delete
-
-## Product
+### User
 
 - create
 - read
 - update
 - delete
 
-## Payment
+### Product
 
 - create
 - read
 - update
 - delete
 
-## Order
+### Payment
 
 - create
 - read
 - update
 - delete
 
-# Each entity will have the following crud operations
-
-## User
+### Order
 
 - create
 - read
 - update
 - delete
-
-## Product
-
-- create
-- read
-- update
-- delete
-
-## Payment
-
-- create
-- read
-- update
-- delete
-
-## Order
-
-- create
-- read
-- update
-- delete
-
-# Each entity will have the following events
-
-## User
-
-- create
-- read
-- update
-- delete
-
-## Product
-
-- create
-- read
-- update
-- delete
-
-## Payment
-
-- create
-- read
-- update
-- delete
-
-## Order
-
-- create
-- read
-- update
-- delete
-
-# Each entity will have the following hooks
-
-## User
-
-- create
-- read
-- update
-- delete
-
-## Product
