@@ -7,104 +7,16 @@
 - Payment
 - Order
 
-## Each entity will have the following attributes
+## Project Description
 
-- id
-- createdAt
-- updatedAt
-- deletedAt
+This project api made for a e-commerce. It is build using [Node.js](https://nodejs.org/en/), [Express](https://expressjs.com/), [Prisma](https://www.prisma.io/), [Docker](https://www.docker.com/), and other technologies to see other packages used in this project you should check the [package.json](backend/package.json) file.
 
-### User
+## Project initialization
 
-- id
-- name
-- email
-- password
-- createdAt
-- updatedAt
-- deletedAt
+### To start the project you should follow the steps below
 
-### Product
-
-- id
-- name
-- description
-- price
-- createdAt
-- updatedAt
-- deletedAt
-
-### Payment
-
-- id
-- userId
-- productId
-- paymentMethod
-- paymentStatus
-- createdAt
-- updatedAt
-- deletedAt
-
-### Order
-
-- id
-- userId
-- productId
-- paymentId
-- createdAt
-- updatedAt
-- deletedAt
-
-## Each entity has the following relationships
-
-### User
-
-- hasMany: Payment
-- hasMany: Order
-
-### Product
-
-- belongsTo: User
-- hasMany: Order
-
-### Payment
-
-- belongsTo: User
-- belongsTo: Product
-- hasMany: Order
-
-### Order
-
-- belongsTo: User
-- belongsTo: Product
-- belongsTo: Payment
-
-## Each entity will have the following crud operations
-
-### User
-
-- create
-- read
-- update
-- delete
-
-### Product
-
-- create
-- read
-- update
-- delete
-
-### Payment
-
-- create
-- read
-- update
-- delete
-
-### Order
-
-- create
-- read
-- update
-- delete
+1. Clone the project in your local machine.
+2. Move to the backend folder on your terminal.
+3. Run the command: `npm install` or `yarn` to install all the packages needed.
+4. Run the command: `docker-compose up` to setup the database environment.
+5. Then create a .env file in the backend folder and add the following variables in the file [exemple.env](backend/exemple.env)
