@@ -6,5 +6,6 @@ const userService = new UserService();
 
 userController.get("/get-users", userService.getUsers);
 userController.get("/get-user/:id", userService.getUser);
+userController.post("/create-user", userService.createUser);
 
 export { userController };
