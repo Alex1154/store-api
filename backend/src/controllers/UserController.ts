@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { UserService } from "@services/UserServices";
+import { UserService } from "../services/UserServices";
 
 const userController = Router();
 const userService = new UserService();
