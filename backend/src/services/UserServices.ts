@@ -26,6 +26,7 @@ export class UserService {
 
   public async createUser(req: Request, res: Response) {
     const { name, email } = req.body;
+
     const user = await prismaClient.user
       .create({
         data: {
@@ -34,7 +35,7 @@ export class UserService {
         },
       })
       .then((user) => {
-        return res.json({
+        return res.status(201).json({
           message: "User created",
           user,
         });
