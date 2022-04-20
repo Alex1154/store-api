@@ -26,7 +26,7 @@ model User {
 model Product{
   productId     String    @id @default(uuid())
   name          String
-  quantity      Int       @default(1)
+  quantity      Int?       @default(1)
   price         Float
   brand         String
   description   String
@@ -39,6 +39,7 @@ model Product{
 model Payment{
   paymentId     String    @id @default(uuid())
   userId        String
+  cardNumber    String
   total         Float
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
